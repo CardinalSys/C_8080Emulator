@@ -1,17 +1,14 @@
+#include "Disassembler.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-void ReadRom();
+
 int DisassembleOpcode(unsigned char* buffer, long size);
 
-int main() {
-	ReadRom();
-	return 0;
-}
 
-void ReadRom() {
+void DebugRom() {
 	long romSize = 0;
-	FILE* fp = fopen("D:/rom/rom.bin", "rb");
+	FILE* fp = fopen("D:/rom/Space invaders/invaders.h", "rb");
 	if (fp == NULL) {
 		printf("File not found\n");
 		return 0;

@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cpu.c" />
     <ClCompile Include="Disassembler.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cpu.h" />
     <ClInclude Include="Disassembler.h" />
     <ClInclude Include="global.h" />
   </ItemGroup>

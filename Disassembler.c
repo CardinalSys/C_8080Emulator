@@ -8,7 +8,9 @@ int DisassembleOpcode(unsigned char* buffer, long size);
 
 void DebugRom() {
 	long romSize = 0;
-	FILE* fp = fopen("D:/rom/Space invaders/invaders.h", "rb");
+    FILE* fp;
+    errno_t err;
+    err = fopen_s(&fp, "D:/rom/Space invaders/invaders.h", "rb");
 	if (fp == NULL) {
 		printf("File not found\n");
 		return 0;
